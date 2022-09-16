@@ -21,7 +21,7 @@ const yargOptions = yargs(process.argv.slice(2))
 const args = yargOptions.alias({
     p: 'port'
 }).default({
-    port: 3000,
+    port: process.env.PORT || 3000,
     mode: 'fork'
 }).argv
 
